@@ -1,0 +1,51 @@
+.legal-page-footer {
+  padding-bottom: 11px;
+
+  &__decor-box {
+    margin-bottom: 4px;
+
+    @include media(desktop) {
+      margin-bottom: 11px;
+    }
+  }
+
+  @include media(desktop) {
+    padding-bottom: 18px;
+  }
+}
+
+.legal-pages-nav {
+  margin-bottom: 10px;
+
+  @include media(desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+.legal-pages-nav-list {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+  }
+
+  &__link {
+    @include font(13, 18);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    @include media(desktop) {
+      @include font(20, 30);
+      text-underline-offset: 5px;
+    }
+  }
+}
+
+.center-note {
+  @include font(11, 18);
+  text-align: center;
+
+  @include media(desktop) {
+    @include font(18, 26);
+  }
+}
