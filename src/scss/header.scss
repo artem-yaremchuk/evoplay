@@ -1,5 +1,91 @@
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
   max-width: 320px;
-  padding: 14px 14px 14px 24px;
+  padding: 14px 24px 14px 24px;
   background-color: $_Menu;
+  margin: 0 auto;
+  display: flex;
+  gap: 208px;
+
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 18px 84px 18px 84px;
+  }
+}
+
+.header-nav {
+  @include media(desktop) {
+    display: flex;
+    gap: 73px;
+    align-items: center;
+  }
+}
+
+.header-logo {
+  @include media(desktop) {
+    width: 60px;
+  }
+}
+
+.header-menu {
+  display: none;
+
+  @include media(desktop) {
+    display: flex;
+    gap: 18px;
+  }
+}
+
+.header-menu-link {
+  @include media(desktop) {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    position: relative;
+  }
+
+  transition: color $_transition;
+
+  &:hover,
+  &:focus {
+    color: $_Button_arrow_blue;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $_Button_arrow_blue;
+      transition: width $_transition;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $_Button_arrow_blue;
+  }
+}
+
+.open-menu-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @include media(desktop) {
+    display: none;
+  }
 }
