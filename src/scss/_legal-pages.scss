@@ -1,0 +1,60 @@
+.legal-page-section:not(:last-child) {
+  margin-bottom: 16px;
+
+  @include media(desktop) {
+    margin-bottom: 36px;
+  }
+}
+
+.legal-page-heading {
+  margin-bottom: 8px;
+  padding: 4px 0;
+  @include font(20, 30);
+
+  @include media(desktop) {
+    padding: 10px 0;
+    @include font(32, 38.4);
+  }
+}
+
+.legal-page-text {
+  margin-bottom: 32px;
+  @include font(14, 21);
+
+  & + .service-providers-list {
+    margin-top: -32px;
+  }
+
+  @include media(desktop) {
+    @include font(18, 26);
+  }
+}
+
+.legal-page-list {
+  &__item {
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background-color: black;
+      border-radius: 50%;
+    }
+  }
+}
+
+.service-providers-list {
+  margin-top: 4px;
+  margin-bottom: 32px;
+}
+
+.service-providers-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: $_services-link-color;
+}
