@@ -18,11 +18,22 @@
 }
 
 .legal-page-text {
-  margin-bottom: 32px;
   @include font(14, 21);
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+
+    @include media(desktop) {
+      margin-bottom: 39px;
+    }
+  }
 
   & + .service-providers-list {
     margin-top: -32px;
+
+    @include media(desktop) {
+      margin-top: -39px;
+    }
   }
 
   @include media(desktop) {

@@ -26,9 +26,6 @@
   display: flex;
   justify-content: center;
 
-  &__item {
-  }
-
   &__link {
     @include font(13, 18);
     text-decoration: underline;
