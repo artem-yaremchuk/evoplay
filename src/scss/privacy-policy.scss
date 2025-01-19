@@ -1,1 +1,60 @@
+.privacy-policy-section {
+  padding-top: 74px;
+  padding-bottom: 27px;
+  background-color: $_menu;
 
+  @include media(desktop) {
+    padding-top: 126px;
+    padding-bottom: 91px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.privacy-policy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(desktop) {
+    gap: 36px;
+  }
+}
+
+.privacy-policy-subtitle {
+  font-weight: 700px;
+  margin-bottom: 1px;
+
+  @include font(20, 30);
+
+  @include media(desktop) {
+    @include font(32, 38.4);
+  }
+}
+
+.privacy-policy-text {
+  @include font(14, 21);
+
+  @include media(desktop) {
+    @include font(18, 26);
+  }
+}
+
+.with-margin-bottom {
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    margin-bottom: 39px;
+  }
+}
