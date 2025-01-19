@@ -28,8 +28,12 @@
 
   &__link {
     @include font(13, 18);
-    text-decoration: underline;
     text-underline-offset: 3px;
+
+    &.current,
+    &:hover {
+      text-decoration: underline;
+    }
 
     @include media(desktop) {
       @include font(20, 30);
