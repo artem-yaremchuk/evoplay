@@ -10,7 +10,9 @@
 }
 
 .footer-bg-container {
+  max-width: 320px;
   min-height: 302.25px;
+  margin: 0 auto;
   margin-bottom: 12px;
 
   background-image: url('../img/bg-footer-mob.jpg');
@@ -19,6 +21,7 @@
   background-position: center;
 
   @include media(desktop) {
+    max-width: 1200px;
     min-height: 785.74px;
     margin-bottom: 11px;
 
