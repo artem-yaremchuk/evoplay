@@ -7,7 +7,7 @@
 .header-container {
   max-width: 320px;
   padding: 14px 24px 14px 24px;
-  background-color: $_Menu;
+  background-color: $_menu;
   margin: 0 auto;
   display: flex;
   gap: 208px;
@@ -53,7 +53,7 @@
 
   &:hover,
   &:focus {
-    color: $_Button_arrow_blue;
+    color: $_button_arrow_blue;
 
     &:after {
       content: '';
@@ -63,7 +63,7 @@
       width: 100%;
       height: 2px;
       border-radius: 2px;
-      background-color: $_Button_arrow_blue;
+      background-color: $_button_arrow_blue;
       transition: width $_transition;
     }
   }
@@ -76,7 +76,7 @@
     width: 0;
     height: 2px;
     border-radius: 2px;
-    background-color: $_Button_arrow_blue;
+    background-color: $_button_arrow_blue;
   }
 }
 
