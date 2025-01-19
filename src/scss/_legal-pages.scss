@@ -18,11 +18,22 @@
 }
 
 .legal-page-text {
-  margin-bottom: 32px;
   @include font(14, 21);
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+
+    @include media(desktop) {
+      margin-bottom: 39px;
+    }
+  }
 
   & + .service-providers-list {
     margin-top: -32px;
+
+    @include media(desktop) {
+      margin-top: -39px;
+    }
   }
 
   @include media(desktop) {
@@ -42,7 +53,7 @@
       display: inline-block;
       width: 5px;
       height: 5px;
-      background-color: black;
+      background-color: $_blue_text;
       border-radius: 50%;
     }
   }
