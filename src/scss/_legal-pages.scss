@@ -69,7 +69,12 @@
 }
 
 .service-providers-link {
+  @include font(14, 21);
   text-decoration: underline;
   text-underline-offset: 4px;
   color: $_services_link_color;
+
+  @include media(desktop) {
+    @include font(18, 26);
+  }
 }

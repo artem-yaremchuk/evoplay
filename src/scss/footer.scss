@@ -1,7 +1,12 @@
 .footer {
   width: 100%;
+  padding-bottom: 8px;
 
   background-color: $_back_1_blue;
+
+  @include media(desktop) {
+    padding-bottom: 25px;
+  }
 }
 
 .footer-bg-container {
