@@ -25,3 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+main {
+  padding-top: 60px;
+
+  @include media(desktop) {
+    padding-top: 96px;
+  }
+}
