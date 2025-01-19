@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+}
+
+.footer-bg-container {
+  min-height: 302.25px;
+  margin-bottom: 12px;
+
+  background-image: url('../img/bg-footer-mob.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include media(desktop) {
+    min-height: 785.74px;
+    margin-bottom: 11px;
+
+    background-image: url('../img/bg-footer-desk.jpg');
+  }
+}
+
+.footer-heading {
+  width: 256px;
+  margin: 0 auto;
+  padding-top: 33px;
+
+  @include font(18, 27);
+  text-align: center;
+  color: white;
+
+  @include media(desktop) {
+    width: 500px;
+    padding-top: 74px;
+    @include font(32, 48);
+  }
+}
