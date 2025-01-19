@@ -21,12 +21,13 @@
 
 .privacy-policy-subtitle {
   font-weight: 700px;
-  margin-bottom: 1px;
+  margin-bottom: 4px;
 
   @include font(20, 30);
 
   @include media(desktop) {
     @include font(32, 38.4);
+    margin-bottom: 10px;
   }
 }
 
