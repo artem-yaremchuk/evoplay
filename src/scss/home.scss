@@ -6,7 +6,7 @@
     background-position: center;
     background-size: cover;
     max-width: 1200px;
-    padding: 178px 607px 149px 89px;
+    padding: 188px 645px 149px 89px;
     margin: 0 auto;
 
     @media (min-device-pixel-ratio: 2),
@@ -53,7 +53,7 @@
 
   @include media(desktop) {
     @include font(64, 80);
-    margin-bottom: 18px;
+    margin-bottom: 28px;
     text-align: unset;
   }
 }
@@ -66,10 +66,11 @@
   margin-bottom: 19.5px;
 
   @include media(desktop) {
+    font-family: 'Lato Medium';
     @include font(32, 48);
     text-align: unset;
     padding-left: unset;
-    padding-right: unset;
+    padding-right: 91px;
     margin-bottom: 82px;
   }
 }
@@ -82,7 +83,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  padding: 6px 12px 6px 13px;
+  padding: 9px 12px 6px 13px;
   background-color: $_button;
   border: 1px solid $_white;
   border-radius: 16.33px;
@@ -90,7 +91,7 @@
 
   @include media(desktop) {
     gap: 14px;
-    padding: 9px 18px 9px 20px;
+    padding: 13px 18px 9px 20px;
     border-radius: 24.07px;
   }
 
@@ -103,6 +104,12 @@
 .google-play-icon {
   @include media(desktop) {
     width: 43px;
+  }
+}
+
+.get-it-logo {
+  @include media(desktop) {
+    width: 73px;
   }
 }
 

@@ -11,6 +11,13 @@
 @import './utils/index';
 @import './mob-menu.scss';
 
+@font-face {
+  font-family: 'Lato Medium';
+  src: url('../fonts/Lato-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
 :root {
   font-family: 'Lato', serif;
   font-size: 16px;
