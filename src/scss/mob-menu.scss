@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  align-items: center;
+  padding-left: 60px;
 }
 
 .mob-menu-list {
@@ -63,7 +63,7 @@
 }
 
 .privacy-terms-link {
-  text-transform: uppercase;
+  //   text-transform: uppercase;
   transition: color $_transition;
 }
 
