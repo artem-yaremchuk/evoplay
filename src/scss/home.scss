@@ -1,0 +1,125 @@
+.hero {
+  @include media(desktop) {
+    background-color: $_back_1_blue;
+    background-image: url(../img/hero-background-desk-1x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1200px;
+    padding: 178px 607px 149px 89px;
+    margin: 0 auto;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/hero-background-desk-2x.jpg);
+    }
+  }
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media(desktop) {
+    all: unset;
+  }
+}
+
+.hero-image {
+  margin-bottom: 17px;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.hero-wrap {
+  max-width: 320px;
+  padding-left: 65.5px;
+  padding-right: 65.5px;
+
+  @include media(desktop) {
+    all: unset;
+  }
+}
+
+.hero-title {
+  font-weight: 800px;
+  @include font(26, 40);
+  margin-bottom: 7.5px;
+  text-align: center;
+
+  @include media(desktop) {
+    @include font(64, 80);
+    margin-bottom: 18px;
+    text-align: unset;
+  }
+}
+
+.hero-text {
+  @include font(15, 22);
+  text-align: center;
+  padding-left: 6.5px;
+  padding-right: 6.5px;
+  margin-bottom: 19.5px;
+
+  @include media(desktop) {
+    @include font(32, 48);
+    text-align: unset;
+    padding-left: unset;
+    padding-right: unset;
+    margin-bottom: 82px;
+  }
+}
+
+.hero-google-play {
+  @include media(desktop) {
+    display: inline-block;
+  }
+}
+
+.hero-google-play-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 12px 6px 13px;
+  background-color: $_button;
+  border: 1px solid $_white;
+  border-radius: 16.33px;
+  transition: background-color $_transition;
+
+  @include media(desktop) {
+    gap: 14px;
+    padding: 9px 18px 9px 20px;
+    border-radius: 24.07px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $_button_hover;
+  }
+}
+
+.google-play-icon {
+  @include media(desktop) {
+    width: 43px;
+  }
+}
+
+.hero-link-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  @include media(desktop) {
+    gap: 6px;
+  }
+}
+
+.google-play-logo {
+  @include media(desktop) {
+    width: 160px;
+  }
+}
