@@ -1,0 +1,73 @@
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100vw;
+  height: 100vh;
+  background-color: $_back_1_blue;
+  overflow: auto;
+  transform: translateX(100%);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  transition: transform 0.7s ease, clip-path 0.7s ease-in-out;
+}
+
+.mob-menu.is-open {
+  transform: translateX(0%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.mob-menu-btn {
+  padding: 14px 24px 15px 167px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mob-menu-close-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.mob-menu-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.mob-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mob-menu-link {
+  font-family: 'Inter', serif;
+  text-transform: uppercase;
+
+  @include font(16, 19.36);
+
+  transition: color $_transition;
+}
+
+.mob-menu-link:hover,
+.mob-menu-link:focus {
+  color: $_button_arrow_blue;
+}
+
+.privacy-terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.privacy-terms-link {
+  text-transform: uppercase;
+  transition: color $_transition;
+}
+
+.privacy-terms-link:hover,
+.privacy-terms-link:focus {
+  color: $_button_arrow_blue;
+}

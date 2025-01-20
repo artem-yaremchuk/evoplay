@@ -1,10 +1,10 @@
 .privacy-policy-section {
-  padding-top: 74px;
+  padding-top: 14px;
   padding-bottom: 27px;
   background-color: $_menu;
 
   @include media(desktop) {
-    padding-top: 126px;
+    padding-top: 30px;
     padding-bottom: 91px;
   }
 }
