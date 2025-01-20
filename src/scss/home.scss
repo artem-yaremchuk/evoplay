@@ -75,9 +75,7 @@
 }
 
 .hero-google-play {
-  @include media(desktop) {
-    display: inline-block;
-  }
+  display: inline-block;
 }
 
 .hero-google-play-link {
