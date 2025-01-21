@@ -86,13 +86,12 @@
   padding: 9px 12px 6px 13px;
   background-color: $_button;
   border: 1px solid $_white;
-  border-radius: 16.33px;
+  border-radius: 8px;
   transition: background-color $_transition;
 
   @include media(desktop) {
     gap: 14px;
     padding: 13px 18px 9px 20px;
-    border-radius: 24.07px;
   }
 
   &:hover,
