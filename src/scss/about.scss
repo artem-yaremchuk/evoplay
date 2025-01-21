@@ -73,3 +73,18 @@
     width: 1200px;
   }
 }
+
+.about-image-desk {
+  display: none;
+
+  @include media(desktop) {
+    all: unset;
+    width: 1200px;
+  }
+}
+
+.about-image-mob {
+  @include media(desktop) {
+    display: none;
+  }
+}
