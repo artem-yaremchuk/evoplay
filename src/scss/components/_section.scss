@@ -1,0 +1,55 @@
+.section-title {
+  position: relative;
+
+  margin-bottom: 24px;
+
+  @include font(20, 36);
+  font-weight: 800;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 10.5px;
+
+    width: 44px;
+    height: 15px;
+
+    background-image: url('../img/section-title-decor-mob.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include media(desktop) {
+      top: 21px;
+      width: 175px;
+      height: 38px;
+
+      background-image: url('../img/section-title-decor-desk.png');
+    }
+  }
+
+  &::before {
+    left: 48.5px;
+
+    @include media(desktop) {
+      left: 240px;
+    }
+  }
+
+  &::after {
+    right: 48.5px;
+    transform: scaleX(-1);
+
+    @include media(desktop) {
+      right: 240px;
+    }
+  }
+
+  @include media(desktop) {
+    margin-bottom: 44px;
+    @include font(40, 80);
+  }
+}
