@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding-top: 34px;
   padding-bottom: 0;
+  background-color: $_back_1_blue;
 
   @include media(desktop) {
     max-width: 1200px;

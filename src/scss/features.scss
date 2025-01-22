@@ -70,9 +70,14 @@
   );
   box-shadow: 1px 1px 6px 0px #689334 inset;
   box-shadow: -1px -1px 6px 0px #689334 inset;
+  transition: transform $_transition;
 
   @include media(desktop) {
     padding: 16px 32px 18px 32px;
+  }
+
+  &:hover {
+    transform: scale(1.01);
   }
 }
 
