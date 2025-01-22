@@ -1,1 +1,140 @@
+.features {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 21px 16px 40px 16px;
+  background-color: $_features_back_3_green;
 
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 73px 172px 47px 172px;
+    background-image: url(../img/features-back-desk-1x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/features-back-desk-2x.jpg);
+    }
+  }
+}
+
+.features-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 24px;
+
+  @include media(desktop) {
+    gap: 50.5px;
+    margin-bottom: 44px;
+  }
+}
+
+.features-icon-left-desk,
+.features-icon-right-desk {
+  display: none;
+
+  @include media(desktop) {
+    all: unset;
+    width: 155px;
+  }
+}
+
+.features-icon-left-mob,
+.features-icon-right-mob {
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
+
+.features-item {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(217, 242, 136, 0.8) 0%,
+    rgba(251, 249, 234, 0.8) 100%
+  );
+  box-shadow: 1px 1px 6px 0px #689334 inset;
+  box-shadow: -1px -1px 6px 0px #689334 inset;
+
+  @include media(desktop) {
+    padding: 16px 32px 18px 32px;
+  }
+}
+
+.features-title {
+  color: $_features_green_text;
+  font-family: 'Lato Bold';
+  @include font(20, 36);
+
+  @include media(desktop) {
+    @include font(40, 80);
+  }
+}
+
+.features-subtitle {
+  font-family: 'Lato Bold';
+  color: $_features_black;
+  margin-bottom: 2px;
+
+  @include media(desktop) {
+    @include font(28, 34);
+    margin-bottom: 4px;
+  }
+}
+
+.features-text {
+  color: $_features_black;
+  @include font(13, 18);
+
+  @include media(desktop) {
+    @include font(22, 32);
+  }
+}
+
+.features-icons-list {
+  display: none;
+
+  @include media(desktop) {
+    display: unset;
+  }
+}
+
+.features-list-wrap {
+  @include media(desktop) {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.features-icons-item {
+  width: 136px;
+}
+
+.features-icons-list {
+  @include media(desktop) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.customized {
+  @include media(desktop) {
+    padding: 32px 32px 34px 32px;
+  }
+}
