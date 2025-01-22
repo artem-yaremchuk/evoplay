@@ -1,0 +1,150 @@
+.faq-section {
+  padding-top: 16px;
+
+  @include media(desktop) {
+    padding-top: 72px;
+  }
+}
+
+.faq-container {
+  @include media(desktop) {
+    padding: 0 148px;
+  }
+}
+
+.faq-section-title {
+  margin-bottom: 16px;
+  color: $_blue_text;
+
+  &::before,
+  &::after {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(32%) saturate(2859%)
+      hue-rotate(212deg) brightness(93%) contrast(120%);
+  }
+
+  &::before {
+    left: 65.5px;
+
+    @include media(desktop) {
+      left: 210.5px;
+    }
+  }
+
+  &::after {
+    right: 65.5px;
+
+    @include media(desktop) {
+      right: 210.5px;
+    }
+  }
+}
+
+.faq-list {
+  &__item {
+    padding: 8px 16px 7px;
+    background-color: $_card_color;
+
+    @include media(to-desktop) {
+      border-top: 1px solid $_slider_buttons_border;
+
+      &:last-child {
+        border-bottom: 1px solid $_slider_buttons_border;
+      }
+    }
+
+    @include media(desktop) {
+      padding: 14.5px 33px 14.5px 23px;
+      border: 1px solid $_back_1_blue;
+      border-radius: 22px;
+      box-shadow: 0 4px 6px 0 #0563ba40;
+
+      &.active {
+        padding-top: 20px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__question {
+    @include font(15, 22);
+    font-weight: 600;
+
+    @include media(desktop) {
+      @include font(22, 32);
+      font-weight: 700;
+    }
+  }
+
+  &__answer {
+    width: 232px;
+    height: 0;
+    visibility: hidden;
+
+    @include font(13, 18);
+    color: $_faq_answer_color;
+
+    @include media(desktop) {
+      width: 597px;
+      @include font(20, 30);
+    }
+  }
+
+  &__item.active &__answer {
+    height: auto;
+    visibility: visible;
+    padding-bottom: 3px;
+    margin-top: 6px;
+
+    @include media(desktop) {
+      padding-bottom: 5px;
+      margin-top: 14.5px;
+    }
+  }
+
+  &__item.active .faq-control-button {
+    background-color: $_button_arrow_blue;
+    border-color: $_button_arrow_blue;
+    transform: rotate(180deg);
+  }
+
+  &__item.active .control-button-icon {
+    filter: brightness(0) invert(1);
+  }
+
+  @include media(to-desktop) {
+    margin: 0 -16px;
+  }
+
+  //   @include media(desktop) {
+  //     padding: 0 64px;
+  //   }
+}
+
+.faq-control-button {
+  box-shadow: 0 5px 16px 0 #080f340f;
+  transition: transform $_transition;
+
+  @include media(to-desktop) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.faq-arrow-button-box {
+  width: 13.5px;
+  height: 7.25px;
+
+  @include media(desktop) {
+    width: 18.3px;
+    height: 10.11px;
+  }
+}
+
+.faq-question-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
