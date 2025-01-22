@@ -32,7 +32,7 @@
   font-weight: 400;
 
   color: $_blue_text;
-  background-color: $_back_1_blue;
+  background-color: $_menu; //$_back_1_blue
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,5 +46,13 @@ main {
 
   @include media(desktop) {
     padding-top: 96px;
+  }
+}
+
+section {
+  scroll-margin-top: 60px;
+
+  @include media(desktop) {
+    scroll-margin-top: 96px;
   }
 }
