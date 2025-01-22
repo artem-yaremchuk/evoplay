@@ -20,8 +20,10 @@
     />
     
     <script type="module" crossorigin src="/evoplay/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/evoplay/assets/styles-9296b346.js">
-    <link rel="stylesheet" href="/evoplay/assets/styles-81a7179e.css">
+    <link rel="modulepreload" crossorigin href="/evoplay/assets/styles-01db09c3.js">
+    <link rel="modulepreload" crossorigin href="/evoplay/assets/vendor-c8b3e011.js">
+    <link rel="stylesheet" href="/evoplay/assets/styles-8afcd2bc.css">
+    <link rel="stylesheet" href="/evoplay/assets/vendor-fef9b9da.css">
   </head>
   <body>
     <!-- Loads the specified .html file -->
@@ -207,13 +209,14 @@
       
       
       
-      <section class="review-section">
-  <div class="container">
-    <h2 class="section-heading">Reviews</h2>
-    <div class="reviews-swiper">
-      <ul class="review-list">
-        <li class="review-list__item">
-          <div class="user-info-box">
+      <section id="reviews" class="reviews-section">
+  <div class="container reviews-container">
+    <h2 class="section-title reviews-section-title">Reviews</h2>
+
+    <div class="swiper reviews-swiper">
+      <ul class="reviews-list swiper-wrapper">
+        <li class="reviews-list__item swiper-slide">
+          <div class="rating-box">
             <div class="user-info-box">
               <div class="avatar-container">
                 <img
@@ -227,7 +230,43 @@
               <div class="username">GreenDreamer</div>
             </div>
 
-            <div class="rating">★★★★★</div>
+            <div class="rating">
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="review">
@@ -235,8 +274,8 @@
             valley come to life!"
           </div>
         </li>
-        <li class="review-list__item">
-          <div class="user-info-box">
+        <li class="reviews-list__item swiper-slide">
+          <div class="rating-box">
             <div class="user-info-box">
               <div class="avatar-container">
                 <img
@@ -250,7 +289,53 @@
               <div class="username">MergeMaster</div>
             </div>
 
-            <div class="rating">★★★★★</div>
+            <div class="rating">
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  width="12"
+                  height="11"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  width="12"
+                  height="11"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  width="12"
+                  height="11"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  width="12"
+                  height="11"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  width="12"
+                  height="11"
+                  class="reting-star-icon"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="review">
@@ -258,19 +343,151 @@
             great touch!"
           </div>
         </li>
+        <li class="reviews-list__item swiper-slide">
+          <div class="rating-box">
+            <div class="user-info-box">
+              <div class="avatar-container">
+                <img
+                  src="/evoplay/assets/NatureLover-avatar-942554ed.jpg"
+                  alt="MergeMaster avatar"
+                  width="36"
+                  height="36"
+                  class="avatar"
+                />
+              </div>
+              <div class="username">NatureLover</div>
+            </div>
+
+            <div class="rating">
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="review">
+            "A unique game that combines fun gameplay with a meaningful mission.
+            Highly recommend!"
+          </div>
+        </li>
+
+        <li class="reviews-list__item swiper-slide">
+          <div class="rating-box">
+            <div class="user-info-box">
+              <div class="avatar-container">
+                <img
+                  src="/evoplay/assets/HappyPlayer-avatar-ae363c9e.jpg"
+                  alt="HappyPlayer avatar"
+                  width="36"
+                  height="36"
+                  class="avatar"
+                />
+              </div>
+              <div class="username">HappyPlayer</div>
+            </div>
+
+            <div class="rating">
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+              <div class="rating-star-icon-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJoSURBVHgBvZdRctMwEIZ3pdAOPIA5AXFbMulbcgKcE1BOQHuCtCdQzHCA5gT0COEEhBOQJ2hoZuwnXnFeYNKpd5HSuDitZROZ9pvxWLal6LdW/64DUINIvexcqHYANWhAHST2G0Cebo3BEQRHItVusuDItOe0eN4N4wQcEOCK5H7WfIpbfXDEWQAzHGRtRDj+opoeOOAkYKbah/rU/HsHPU9svQYHnAQIwXeWnAEPwYGNBUTXtusUPApcLLn5Ckh6a3vUkLTxZtzIhnnr2djUklg2GUDqpYD6LDwp+JnuHeR3fxGMPBKM45RwzgCxuaezXeyH53GhgOhdS+lzhxmNjZr68FbHfZCsjhiREyCYCEifDFcLEeQE3BfZSwZM6CV8ObwJQTRoKUYcwAPATKe7g4sT017bAw8hQu+L4101HWbXdzbhTLUOhMAP8P9DkRDx0V74fZS/WeiCb9oB24I/wVq6rUV8RfJNK/w6uf2gMBHta8ssCHuwslE9eGJ+q2hyq4BMBNLjrq50I3CdWo+d02Vv35IDSgUY/HCSpCl+BEcEw7gqK1bWAinJqcwuYe5UdakUoDNk5Y9YxyIGVX1KBVzXg1pOaP54778AVwEpkPPbZyzSRwG4CpASyuKfmKxGhEdQYleq2AelAmzxN7lc133fpNS98PzM+FyX4bOivoiitHyXfA90PBa/f67PDGPEdOCr2eeiMbYMWvaRYl2BFH4Fucvlcu8Mpj3b5AaTcHbU1L8dFk9sv7KNsQqQiMtB+eWGf+QmLAyn5pqYAlvfkv+GnFxRo9sKpxNwYJV+T3RYhlsI1o/VP3t2AgC5jgsXAAAAAElFTkSuQmCC"
+                  alt="Rating star"
+                  class="reting-star-icon"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="review">
+            "I can’t put this game down. Merging items and restoring the valley
+            is so satisfying!"
+          </div>
+        </li>
       </ul>
-      <div class="reviews-slider-control-box">
-        <button type="button" class="reviews-slider-button-prev">
-          <svg width="17.07" height="17.07" class="slider-arrow-icon">
-            <use href="/evoplay/assets/sprite-141f59e0.svg#arrow-left"></use>
-          </svg>
-        </button>
-        <button type="button" class="reviews-slider-button-next">
-          <svg width="17.07" height="17.07" class="slider-arrow-icon">
-            <use href="/evoplay/assets/sprite-141f59e0.svg#arrow-right"></use>
-          </svg>
-        </button>
-      </div>
+    </div>
+
+    <div class="reviews-slider-control-box">
+      <button type="button" class="reviews-slider-button-prev">
+        <div class="slider-arrow-button-box">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEjSURBVHgB3djBDYIwFIDhV7xxdgnjEgzAybgDY1DG4OYAxhMD6BK6BGduWEvVGKyFts++Gv/Ekx6+VGLfE+DfWm5rPrwA2QKQKYRgJQDL0nXOunNzBM9QmBfkGQ6UgGc65NEVBHjGwCMjRAjeHooKPHPGhII4Y0JCnDChIdYYCogVhgoyi6GETGKoIUZMDMhHTCyIhjFB5O/7ru/7oJARxngihLFfgQzdb23ETfvN1DzTXZpTusrlObEMIjZ+gDd1KUH8/UPqARYJB0rMFAiYqNp9wSFg2thp/srwM64zJibIOJDHAE1uB9Sg2VWFEmS1N1GBrJc4CpDTRhka5LzehgR57dqhQN67tpr65PSnvYGYAFD/QmgnRDCazjZcruqCRXYDh6zpsdhrLB4AAAAASUVORK5CYII="
+            alt="left-arrow"
+            width="17.07"
+            height="17.07"
+            class="slider-arrow-icon prev"
+          />
+        </div>
+      </button>
+      <button type="button" class="reviews-slider-button-next">
+        <div class="slider-arrow-button-box">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEjSURBVHgB3djBDYIwFIDhV7xxdgnjEgzAybgDY1DG4OYAxhMD6BK6BGduWEvVGKyFts++Gv/Ekx6+VGLfE+DfWm5rPrwA2QKQKYRgJQDL0nXOunNzBM9QmBfkGQ6UgGc65NEVBHjGwCMjRAjeHooKPHPGhII4Y0JCnDChIdYYCogVhgoyi6GETGKoIUZMDMhHTCyIhjFB5O/7ru/7oJARxngihLFfgQzdb23ETfvN1DzTXZpTusrlObEMIjZ+gDd1KUH8/UPqARYJB0rMFAiYqNp9wSFg2thp/srwM64zJibIOJDHAE1uB9Sg2VWFEmS1N1GBrJc4CpDTRhka5LzehgR57dqhQN67tpr65PSnvYGYAFD/QmgnRDCazjZcruqCRXYDh6zpsdhrLB4AAAAASUVORK5CYII="
+            alt="left-arrow"
+            width="17.07"
+            height="17.07"
+            class="slider-arrow-icon next"
+          />
+        </div>
+      </button>
     </div>
   </div>
 </section>
