@@ -1,5 +1,9 @@
 .faq-section {
   padding-top: 16px;
+
+  @include media(desktop) {
+    padding-top: 72px;
+  }
 }
 
 .faq-container {
