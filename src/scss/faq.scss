@@ -23,12 +23,16 @@
   }
 
   &::before {
+    left: 65.5px;
+
     @include media(desktop) {
       left: 210.5px;
     }
   }
 
   &::after {
+    right: 65.5px;
+
     @include media(desktop) {
       right: 210.5px;
     }
