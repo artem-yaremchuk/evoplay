@@ -1,5 +1,6 @@
 .faq-section {
   padding-top: 16px;
+  background-color: $_back_1_blue;
 
   @include media(desktop) {
     padding-top: 72px;
@@ -36,6 +37,10 @@
     @include media(desktop) {
       right: 210.5px;
     }
+  }
+
+  @include media(desktop) {
+    margin-bottom: 44px;
   }
 }
 

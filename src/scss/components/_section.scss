@@ -1,3 +1,12 @@
+.section {
+  max-width: $mobile;
+  margin: 0 auto;
+
+  @include media(desktop) {
+    max-width: $desktop;
+  }
+}
+
 .section-title {
   position: relative;
 

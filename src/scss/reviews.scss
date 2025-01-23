@@ -1,14 +1,10 @@
 .reviews-section {
   padding: 40px 0 33px;
 
+  background-color: $_back_1_blue;
+
   @include media(desktop) {
     padding: 72px 0 102px;
-  }
-}
-
-.reviews-container {
-  @include media(to-desktop) {
-    padding-left: 12px;
   }
 }
 
@@ -29,12 +25,19 @@
 }
 
 .swiper.reviews-swiper {
-  padding-left: 4px;
-  padding-bottom: 6px;
+  @include media(to-desktop) {
+    margin-left: -3px;
+    padding-left: 3px;
+    padding-bottom: 6px;
+  }
+
+  @include media(desktop) {
+    overflow: visible;
+  }
 }
 
 .reviews-swiper {
-  height: 208px;
+  height: 214px;
 
   & .swiper-slide {
     box-sizing: border-box;
@@ -45,10 +48,6 @@
     }
   }
 
-  @include media(to-desktop) {
-    padding-bottom: 6px;
-  }
-
   @include media(desktop) {
     height: 368px;
   }
@@ -57,6 +56,7 @@
 .reviews-list {
   &__item {
     padding: 8px;
+    padding-bottom: 10px;
 
     background-color: $_card_color;
     border-radius: 12px;
@@ -64,6 +64,8 @@
 
     @include media(desktop) {
       padding: 24px;
+      padding-bottom: 32px;
+      border-radius: 24px;
       box-shadow: $_card_shadow_desktop;
     }
   }
@@ -77,6 +79,11 @@
 
 .rating-box {
   justify-content: space-between;
+  padding-right: 2px;
+
+  @include media(desktop) {
+    padding-right: 21px;
+  }
 }
 
 .avatar-container {
@@ -113,11 +120,20 @@
 .rating {
   display: flex;
   gap: 8.68px;
+
+  @include media(desktop) {
+    gap: 8px;
+  }
 }
 
 .rating-star-icon-box {
   width: 12px;
   height: 11px;
+
+  @include media(desktop) {
+    width: 16px;
+    height: 15px;
+  }
 }
 
 .rating-star-icon {
@@ -134,7 +150,8 @@
 
   @include media(desktop) {
     margin-top: 14px;
-    @include font(18, 26);
+
+    @include font(18, 21);
   }
 }
 
