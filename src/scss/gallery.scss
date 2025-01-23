@@ -1,5 +1,5 @@
 .gallery-section {
-  height: 660px;
+  min-height: 660px;
   padding-bottom: 82px;
 
   background-image: url('../img/gallery-back-mob.jpg');
@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
 
   @include media(desktop) {
-    height: 1070px;
+    min-height: 1070px;
     padding-top: 38px;
     padding-bottom: 131px;
     background-image: url('../img/gallery-back-desk.jpg');
@@ -16,28 +16,12 @@
 }
 
 .gallery-section-title {
-  color: #1c532b;
+  color: $_gallery_primary_accent_color;
 
   &::before,
   &::after {
     filter: brightness(0) saturate(100%) invert(27%) sepia(42%) saturate(335%)
       hue-rotate(107deg) brightness(97%) contrast(98%);
-  }
-
-  &::before {
-    left: 53.5px;
-
-    @include media(desktop) {
-      left: 250px;
-    }
-  }
-
-  &::after {
-    right: 53.5px;
-
-    @include media(desktop) {
-      right: 250px;
-    }
   }
 }
 
@@ -51,7 +35,7 @@
   display: flex;
 
   &__item {
-    border: 4px solid white;
+    border: 4px solid $_white;
     border-radius: 36px;
     overflow: hidden;
   }
@@ -88,8 +72,8 @@
 .gallery-slider-button-next {
   &:hover,
   &:active {
-    background-color: #1c532b;
-    border-color: #1c532b;
+    background-color: $_gallery_primary_accent_color;
+    border-color: $_gallery_primary_accent_color;
   }
 }
 

@@ -13,7 +13,17 @@
   transform: scaleX(-1);
 }
 
-.slider-arrow-icon-box {
+// .slider-arrow-icon-box {
+//   width: 17.07px;
+//   height: 17.07px;
+
+//   @include media(desktop) {
+//     width: 21.33px;
+//     height: 21.33px;
+//   }
+// }
+
+.slider-arrow-icon {
   width: 17.07px;
   height: 17.07px;
 

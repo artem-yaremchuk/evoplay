@@ -1,5 +1,17 @@
+.section {
+  max-width: $mobile;
+  margin: 0 auto;
+
+  @include media(desktop) {
+    max-width: $desktop;
+  }
+}
+
 .section-title {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
 
   margin-bottom: 24px;
 
@@ -11,9 +23,6 @@
   &::after {
     content: '';
 
-    position: absolute;
-    top: 10.5px;
-
     width: 44px;
     height: 15px;
 
@@ -23,7 +32,6 @@
     background-repeat: no-repeat;
 
     @include media(desktop) {
-      top: 21px;
       width: 175px;
       height: 38px;
 
@@ -31,25 +39,14 @@
     }
   }
 
-  &::before {
-    left: 48.5px;
-
-    @include media(desktop) {
-      left: 240px;
-    }
-  }
-
   &::after {
-    right: 48.5px;
     transform: scaleX(-1);
-
-    @include media(desktop) {
-      right: 240px;
-    }
   }
 
   @include media(desktop) {
     margin-bottom: 44px;
+    gap: 26px;
+
     @include font(40, 80);
   }
 }
