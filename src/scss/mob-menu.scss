@@ -27,6 +27,17 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1) rotate(90deg);
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .mob-menu-list-container {
@@ -63,7 +74,6 @@
 }
 
 .privacy-terms-link {
-  //   text-transform: uppercase;
   transition: color $_transition;
 }
 
