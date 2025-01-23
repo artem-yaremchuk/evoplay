@@ -27,6 +27,8 @@
 }
 
 .header-logo {
+  border-radius: 8px;
+
   @include media(desktop) {
     width: 60px;
   }
