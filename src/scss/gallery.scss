@@ -25,12 +25,6 @@
   }
 }
 
-.swiper.gallery-swiper {
-  @include media(to-desktop) {
-    margin-right: -16px;
-  }
-}
-
 .gallery-list {
   display: flex;
 
