@@ -23,22 +23,6 @@
       hue-rotate(212deg) brightness(93%) contrast(120%);
   }
 
-  &::before {
-    left: 65.5px;
-
-    @include media(desktop) {
-      left: 210.5px;
-    }
-  }
-
-  &::after {
-    right: 65.5px;
-
-    @include media(desktop) {
-      right: 210.5px;
-    }
-  }
-
   @include media(desktop) {
     margin-bottom: 44px;
   }
@@ -137,7 +121,7 @@
   }
 }
 
-.faq-arrow-button-box {
+.faq-arrow-icon {
   width: 13.5px;
   height: 7.25px;
 
