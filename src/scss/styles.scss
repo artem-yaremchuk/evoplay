@@ -19,6 +19,13 @@
 }
 
 @font-face {
+  font-family: 'Lato Semibold';
+  src: url('../fonts/lato-semibold.ttf') format('truetype');
+  font-weight: 700; /* Semibold */
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Lato Bold';
   src: url('../fonts/lato-bold.ttf') format('truetype');
   font-weight: 800; /* Bold */
@@ -32,7 +39,7 @@
   font-weight: 400;
 
   color: $_blue_text;
-  background-color: $_menu; //$_back_1_blue
+  background-color: $_menu;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
