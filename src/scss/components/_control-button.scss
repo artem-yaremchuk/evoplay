@@ -11,9 +11,11 @@
   border: 0.8px solid $_slider_buttons_border;
   border-radius: 20px;
 
-  transition: background-color $_transition, border-color $_transition;
+  transition: background-color $_transition, border-color $_transition,
+    transform $_transition;
 
-  &:hover {
+  &:hover,
+  &:active {
     background-color: $_button_arrow_blue;
     border-color: $_button_arrow_blue;
   }
@@ -28,8 +30,10 @@
     transition: filter $_transition;
   }
 
-  &:hover &-icon {
-    filter: brightness(0) invert(1);
+  &:hover &-icon,
+  &:active &-icon {
+    filter: brightness(0) saturate(0) invert(1) sepia(0) saturate(0)
+      hue-rotate(0deg) brightness(1) contrast(1);
   }
 
   @include media(desktop) {
