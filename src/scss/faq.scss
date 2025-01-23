@@ -125,7 +125,6 @@
 
 .faq-control-button {
   box-shadow: 0 5px 16px 0 #080f340f;
-  transition: transform $_transition;
 
   @include media(to-desktop) {
     width: 28px;

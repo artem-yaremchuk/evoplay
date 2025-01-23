@@ -1,0 +1,24 @@
+.slider-control-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+
+  @include media(desktop) {
+    justify-content: center;
+    gap: 25px;
+  }
+}
+
+.next-slider-button {
+  transform: scaleX(-1);
+}
+
+.slider-arrow-icon-box {
+  width: 17.07px;
+  height: 17.07px;
+
+  @include media(desktop) {
+    width: 21.33px;
+    height: 21.33px;
+  }
+}
